@@ -20,10 +20,7 @@ RUN adduser -D nginx
 COPY nginx.conf       /etc/nginx/nginx.conf
 
 COPY index.html      /usr/share/nginx/html/index.html
-COPY foo1.crl        /usr/share/nginx/html/foo1.crl
-COPY foo2.crl        /usr/share/nginx/html/foo2.crl
-COPY foo1.crl        /usr/share/nginx/html/crl/foo1.crl
-COPY foo2.crl        /usr/share/nginx/html/crl/foo2.crl
+COPY sample.crl        /usr/share/nginx/html/sample.crl
 
 EXPOSE 80
 CMD ["/usr/sbin/nginx", "-g", "daemon off;"]
